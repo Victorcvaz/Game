@@ -5,16 +5,16 @@ function startGame() {
     let time = 10;
     let arrayCheck = [];
     arrayCheck.length = 9;
-    function validacao(){
+    function validacao() {
         let cont = arrayCheck.length
-    for (let i = cont;  i >= 0; i--) {
-        if (arrayCheck[i] === "O" || arrayCheck[i] === "X") {
-           arrayCheck.splice(arrayCheck[i]);
-           return true;
+        for (let i = cont; i >= 0; i--) {
+            if (arrayCheck[i] === "O" || arrayCheck[i] === "X") {
+                arrayCheck.splice(arrayCheck[i]);
+                return true;
+            };
         };
+        return false;
     };
-    return false;
-};
 
     setInterval(myTimer, 1000);
     function myTimer() {
@@ -23,8 +23,8 @@ function startGame() {
         if (time < 0) {
             time = time + 11;
             turn = changeTurn(turn);
-        }else{
-            if(validacao() === true){
+        } else {
+            if (validacao() === true) {
                 time = 10
             };
         };
@@ -137,7 +137,7 @@ function startGame() {
                     turn = changeTurn(turn);
                 };
             };
-            
+
         });
     let num4 = document.querySelector(".field4").addEventListener("click", () => {
         if (num4 !== undefined) {
@@ -319,7 +319,6 @@ function startGame() {
         };
     });
 };
-
 
 document.querySelector(".btnStart").addEventListener("click", () => {
     startGame();
