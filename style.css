@@ -26,8 +26,8 @@ html{
     display: flex;
     justify-content: center;
     font-size: 2.5rem;
-    border-bottom: 2px solid white;
-    color: aliceblue;
+    border-bottom: 2px solid black;
+    color: white;
 }
 
 .players{
